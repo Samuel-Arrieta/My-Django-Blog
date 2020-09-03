@@ -13,10 +13,19 @@
             <p>Todo bien, todo correcto hasta el momento.</p>
         </div>
 
+    {% for post in posts %}
+        <div>
+            <p> publicado: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+    
         <div>
             <p>Publicado: 02.09.2020, 5:02 p.m.</p>
             <h2><a href="">Segundo post</a></h2>
             <p>Igual que el anterior, todo anda bien.</p>
         </div>
+
     </body>
 </html>
